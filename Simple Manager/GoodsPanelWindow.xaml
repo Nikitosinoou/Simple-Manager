@@ -1,0 +1,33 @@
+﻿<Window x:Name="GoodsPanel" x:Class="Simple_Manager.GoodsManagerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Simple_Manager"
+        mc:Ignorable="d"
+        Title="GoodsPanel" Height="450" Width="800" Closed="GoodsPanel_Closed">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="AddButton" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="30" Height="30" Click="AddButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="resources/Add.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="RemoveButton" HorizontalAlignment="Left" Margin="80,10,0,0" VerticalAlignment="Top" Width="30" Height="30" Click="RemoveButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="resources/Remove.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ChangeButton" HorizontalAlignment="Left" Margin="45,10,0,0" VerticalAlignment="Top" Width="30" Height="30" Click="ChangeButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="resources/Change.png"/>
+            </Button.Background>
+        </Button>
+        <DataGrid x:Name="DBDataGrid" Margin="10,45,10,10" Grid.ColumnSpan="2" CanUserAddRows="False" IsReadOnly="True" SelectionMode="Single" AutoGeneratingColumn="DBDataGrid_AutoGeneratingColumn"/>
+        <Label x:Name="StatusLabel" Content="" HorizontalAlignment="Left" Margin="204.061,10,0,0" VerticalAlignment="Top" Width="380" Height="30" Grid.Column="1"/>
+
+    </Grid>
+</Window>
